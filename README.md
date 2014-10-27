@@ -2,6 +2,8 @@
 
 Preprocess source code by [espower-source](https://www.npmjs.org/package/espower-source)
 
+[sample](https://github.com/vvakame/karma-espower-preprocessor-sample)
+
 # Installation
 
 ```
