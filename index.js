@@ -24,6 +24,10 @@ var createPreprocessor = function (args, config, logger, helper) {
             opts = helper.merge(opts, {sourceMap: file.sourceMap});
         }
         var modified = espowerSource(content, file.path, opts);
+        if (opts.emitActualCode) {
+            log.debug("emit " + file.path);
+            fs.writeFileSync(file.path, modified);
+        }
         var commented = convert.fromSource(modified);
         if (commented) {
             file.sourceMap = commented.toObject();
