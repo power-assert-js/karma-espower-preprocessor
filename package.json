@@ -1,6 +1,6 @@
 {
   "name": "karma-espower-preprocessor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Karma plugin. power-assert instrumentor",
   "main": "index.js",
   "scripts": {
