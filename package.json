@@ -1,0 +1,24 @@
+{
+  "name": "karma-espower-preprocessor",
+  "version": "0.0.1",
+  "description": "A Karma plugin. power-assert instrumentor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vvakame",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vvakame/karma-espower-preprocessor.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor",
+    "power-assert"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "convert-source-map": "^0.4.1",
+    "espower-source": "^0.9.1"
+  }
+}
