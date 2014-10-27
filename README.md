@@ -1,12 +1,14 @@
 # karma-espower-preprocessor
 
-Preprocess source code by [espower-source](https://github.com/twada/espower-source)
+Preprocess source code by [espower-source](https://www.npmjs.org/package/espower-source)
 
 # Installation
 
 ```
 npm install karma-espower-preprocessor --save-dev
 ```
+
+I'm recommend to use with [karma-sourcemap-loader](https://www.npmjs.org/package/karma-sourcemap-loader) if you use some altJS.
 
 # Configuration
 
@@ -16,17 +18,18 @@ module.exports = function(config) {
   config.set({
     preprocessors: {
       '**/*.js': ['espower']
+      // '**/*.js': ['sourcemap', 'espower']
     },
 
-    coffeePreprocessor: {
-      // options passed to the coffee compiler
+    espowerPreprocessor: {
       options: {
-        bare: true,
-        sourceMap: false
+        // emit espowerified code.
+        // default: false (in-memory)
+        emitActualCode: true
       },
-      // transforming the filenames
       transformPath: function(path) {
-        return path.replace(/\.coffee$/, '.js');
+        // default
+        return path.replace(/\.js$/, '.espowered.js');
       }
     }
   });
