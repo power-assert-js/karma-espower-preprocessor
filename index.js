@@ -1,5 +1,4 @@
 var fs = require('fs');
-var path = require('path');
 var espowerSource = require("espower-source");
 var convert = require('convert-source-map');
 
@@ -10,8 +9,8 @@ var createPreprocessor = function (args, config, logger, helper) {
     var defaultOptions = {}; // see https://github.com/twada/espower-source#api
     var options = helper.merge(defaultOptions, args.options || {}, config.options || {});
 
-    var transformPath = args.transformPath || config.transformPath || function (filepath) {
-            return filepath.replace(/\.js$/, '.espowered.js');
+    var transformPath = args.transformPath || config.transformPath || function (filePath) {
+            return filePath.replace(/\.js$/, '.espowered.js');
         };
 
     return function (content, file, done) {
@@ -23,7 +22,7 @@ var createPreprocessor = function (args, config, logger, helper) {
             log.debug("detected upstream sourceMap info");
             opts = helper.merge(opts, {sourceMap: file.sourceMap});
         }
-        var modified = espowerSource(content, file.path, opts);
+        var modified = espowerSource(content, file.originalPath, opts);
         if (opts.emitActualCode) {
             log.debug("emit " + file.path);
             fs.writeFileSync(file.path, modified);
