@@ -18,7 +18,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "convert-source-map": "^0.4.1",
-    "espower-source": "^0.9.1"
+    "convert-source-map": "^1.0.0",
+    "espower-source": "^0.10.0"
   }
 }
