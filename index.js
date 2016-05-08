@@ -20,7 +20,9 @@ var createPreprocessor = function(args, config, logger, helper) {
         file.path = transformPath(file.originalPath);
 
         var opts = helper._.clone(options);
-        if (file.sourceMap) {
+        if (opts.ignoreUpstreamSourceMap && file.sourceMap) {
+            log.debug("detected upstream sourceMap info, but ignoring");
+        } else if (file.sourceMap) {
             log.debug("detected upstream sourceMap info");
             opts = helper.merge(opts, { sourceMap: file.sourceMap });
         }

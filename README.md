@@ -27,7 +27,10 @@ module.exports = function(config) {
       options: {
         // emit espowerified code.
         // default: false (in-memory)
-        emitActualCode: true
+        emitActualCode: true,
+        // ignore upstream SourceMap info.
+        // default: false
+        ignoreUpstreamSourceMap: false
       },
       transformPath: function(path) {
         // default
