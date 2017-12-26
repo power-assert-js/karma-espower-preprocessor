@@ -9,7 +9,7 @@
   "author": "vvakame",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vvakame/karma-espower-preprocessor.git"
+    "url": "git://github.com/power-assert-js/karma-espower-preprocessor.git"
   },
   "keywords": [
     "karma-plugin",
