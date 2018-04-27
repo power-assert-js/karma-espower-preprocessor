@@ -7,6 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "vvakame",
+  "contributors": [
+    {
+      "name": "Takuto Wada",
+      "url": "https://github.com/twada"
+    },
+    {
+      "name": "Daijirō Wachi",
+      "url": "https://github.com/watilde"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/power-assert-js/karma-espower-preprocessor.git"
